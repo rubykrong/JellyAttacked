@@ -10,6 +10,7 @@ public class Jelly : MonoBehaviour {
 	public GameObject bloodSpr;
 	public Color clr;
 	public float speed = 1.3f;
+	public int HealthPoint;
 
 	void Start () {
 		EnemyBag.EnemyBag.Add ();
@@ -26,17 +27,25 @@ public class Jelly : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Bullets")
-			Wound ();
+		if (other.tag == "Bullets"){
+			
+			int dmg = Random.Range (other.GetComponent<MoveBullet> ().minDmg, other.GetComponent<MoveBullet> ().maxDmg);
+		
+			TakeDamage (dmg);
+				}
+
 	}
 
-	void Wound()
-	{
-		
 
+	void TakeDamage(int _dmg)
+	{
+		HealthPoint -= _dmg;
+
+		if(HealthPoint <= 0)
 		anim.SetBool ("Die", true);	
 
 	}
+
 
 	void Die()
 	{

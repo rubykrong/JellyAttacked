@@ -5,7 +5,7 @@ public class MoveBullet : MonoBehaviour {
 
 	public Vector2  speedMove;
 	public float speed, cof, angl, x = 100f, y = 100f, tg;
-
+	public int minDmg, maxDmg;
 	public Animator anim;
 
 
