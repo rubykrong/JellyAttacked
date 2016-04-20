@@ -9,11 +9,12 @@ public class Jelly : MonoBehaviour {
 	public Sprite[] spr = {};
 	public GameObject bloodSpr;
 	public Color clr;
+	public float speed = 1.3f;
 
 	void Start () {
 		EnemyBag.EnemyBag.Add ();
 
-		GetComponent<Rigidbody2D> ().velocity = new Vector2 (-1.3f, 0f);
+		GetComponent<Rigidbody2D> ().velocity = new Vector2 (-speed, 0f);
 
 	}
 	
