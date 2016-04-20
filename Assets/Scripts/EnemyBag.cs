@@ -30,7 +30,7 @@ public  class EnemyBag{
 
 		static public bool Empty()
 		{
-			Debug.Log (" Проверка");
+			
 			if (CountEnemy == 0)
 				return true;
 			else

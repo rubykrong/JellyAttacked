@@ -21,9 +21,9 @@ public class RespawnJelly : MonoBehaviour {
 	void Update () {
 
 		if (queueSpawn [0]) {
-			Debug.Log ("A");
+			
 			if (EnemyBag.EnemyBag.Empty ()) {
-				Debug.Log ("B");
+				
 				Instantiate (JellyRed, new Vector2 (19f, 2.7f), Quaternion.identity);
 				Instantiate (JellyRed, new Vector2 (21f, 2.7f), Quaternion.identity);
 				Instantiate (JellyRed, new Vector2 (23f, 2.7f), Quaternion.identity);
@@ -32,7 +32,7 @@ public class RespawnJelly : MonoBehaviour {
 			}
 		} else if (queueSpawn [1]) {
 			if (EnemyBag.EnemyBag.Empty ()) {
-				Debug.Log ("C");
+				
 				Instantiate (JellyGreen, new Vector2 (19f, 2.7f), Quaternion.identity);
 				Instantiate (JellyGreen, new Vector2 (21f, 2.7f), Quaternion.identity);
 				Instantiate (JellyGreen, new Vector2 (23f, 2.7f), Quaternion.identity);
